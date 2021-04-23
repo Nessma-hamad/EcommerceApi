@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AngularApi.DTO;
 
 
 namespace AngularApi.Models
@@ -34,6 +35,7 @@ namespace AngularApi.Models
 
             base.OnModelCreating(modelBuilder);
         }
+        public DbSet<AngularApi.DTO.ProductDto> ProductDto { get; set; }
 
 
     }

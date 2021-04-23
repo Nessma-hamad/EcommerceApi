@@ -34,6 +34,10 @@ namespace AngularApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AngularApi", Version = "v1" });
             });
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +50,7 @@ namespace AngularApi
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AngularApi v1"));
             }
 
+            app.UseCors(options => options.AllowAnyOrigin());
             app.UseRouting();
 
             app.UseAuthorization();
@@ -54,6 +59,11 @@ namespace AngularApi
             {
                 endpoints.MapControllers();
             });
+           
+
+           
+
+            
         }
     }
 }
