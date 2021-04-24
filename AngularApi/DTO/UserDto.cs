@@ -1,29 +1,22 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AngularApi.Models
+namespace AngularApi.DTO
 {
-    public class User : IdentityUser
+    public class UserDto
     {
         [Required]
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
         public string Image { get; set; }
-        [Column(TypeName = "date")]
+        
         public DateTime BirthDay { get; set; }
         [Required]
         public string Password { get; set; }
-        [Compare("Password")]
-        public string ConfirmPassword { get; set; }
-        public virtual Cart Cart { get; set; }
-        public virtual Wishlist WishList { get; set; }
-      
-        public virtual ICollection<Order> Orders { get; set; }
     }
 }

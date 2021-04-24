@@ -9,8 +9,9 @@ namespace AngularApi.Models
 {
     public class Wishlist
     {
+        public int ID { get; set; }
         [Key, ForeignKey("User")]
-        public string ID { get; set; }
+        public string UserID { get; set; }
 
         public virtual User User { get; set; }
         public virtual ICollection<Product> Products { get; set; }

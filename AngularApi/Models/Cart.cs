@@ -11,8 +11,9 @@ namespace AngularApi.Models
     [Table("Cart")]
     public class Cart
     {
+        public int ID { get; set; }
         [Key, ForeignKey("User")]
-        public string ID { get; set; }
+        public string UserID { get; set; }
 
         public virtual ICollection<CartProduct> CartProducts { get; set; }
         public virtual User User { get; set; }
