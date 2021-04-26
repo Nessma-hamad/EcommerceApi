@@ -1,6 +1,9 @@
 using AngularApi.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -8,9 +11,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Microsoft.Owin.Security.OAuth;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace AngularApi
@@ -30,7 +35,12 @@ namespace AngularApi
             services.AddCors(CorsOptions => CorsOptions.AddPolicy("MyPolicy",
                builder => builder.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin()));
             services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:CS"]));
+            services.AddIdentityCore<IdentityUser>()
+                    .AddRoles<IdentityRole>() // <--------
+                    
+                    .AddEntityFrameworkStores<DataContext>();
 
+            
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -49,8 +59,9 @@ namespace AngularApi
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AngularApi v1"));
             }
-
+            
             app.UseCors("MyPolicy");
+          
             app.UseRouting();
 
             app.UseAuthorization();
@@ -66,4 +77,7 @@ namespace AngularApi
             
         }
     }
-}
+
+    
+    }
+

@@ -10,7 +10,7 @@ using AngularApi.DTO;
 
 namespace AngularApi.Models
 {
-
+   
 
     public class DataContext : IdentityDbContext
     {

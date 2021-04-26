@@ -210,3 +210,12 @@ D:\ITI Projects\Angular Project\AngularApi\obj\Debug\net5.0\AngularApi.genruntim
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\AngularApi.Views.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\AutoMapper.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\BCrypt.Net-Next.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\AngularApi.StaticWebAssets.xml
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.Owin.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.Owin.Security.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.Owin.Security.OAuth.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Owin.dll

@@ -11,9 +11,10 @@ namespace AngularApi.Models
     public class User : IdentityUser
     {
         [Required]
-        public string FirstName { get; set; }
+        public string UserName { get; set; }
+        
         [Required]
-        public string LastName { get; set; }
+        public string Email { get; set; }
         public string Image { get; set; }
         [Column(TypeName = "date")]
         public DateTime BirthDay { get; set; }
