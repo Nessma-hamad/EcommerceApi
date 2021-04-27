@@ -48,7 +48,7 @@ namespace AngularApi.Controllers
         // PUT: api/Categories/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCategory(int id, [FromForm] CategoryDto  categoryDto)
+        public async Task<IActionResult> PutCategory(int id,  CategoryDto  categoryDto)
         {
             var category = Mapper.Map<Category>(categoryDto);
             if (id != category.ID)
@@ -80,7 +80,7 @@ namespace AngularApi.Controllers
         // POST: api/Categories
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Category>> PostCategory([FromForm] CategoryDto categoryDto)
+        public async Task<ActionResult<Category>> PostCategory( CategoryDto categoryDto)
         {
             var category = Mapper.Map<Category>(categoryDto);
 

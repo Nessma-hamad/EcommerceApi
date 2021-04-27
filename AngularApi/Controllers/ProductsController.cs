@@ -49,7 +49,7 @@ namespace AngularApi.Controllers
         // PUT: api/Products/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutProduct(int id, [FromForm] ProductDto productdto)
+        public async Task<IActionResult> PutProduct(int id, ProductDto productdto)
         {
             var product = Mapper.Map<Product>(productdto);
             if (id != product.ID)
@@ -81,7 +81,7 @@ namespace AngularApi.Controllers
         // POST: api/Products
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Product>> PostProduct([FromForm] ProductDto productdto)
+        public async Task<ActionResult<Product>> PostProduct( ProductDto productdto)
         {
             var product = Mapper.Map<Product>(productdto);
             _context.Products.Add(product);

@@ -39,7 +39,7 @@ namespace AngularApi.Controllers
 
         }
         [HttpPost]
-        public async Task<IActionResult> Register([FromForm] UserDto userdto)
+        public async Task<IActionResult> Register( UserDto userdto)
         {
             var user = Mapper.Map<User>(userdto);
             if (!ModelState.IsValid)
@@ -75,7 +75,7 @@ namespace AngularApi.Controllers
         }
         [HttpPost]
         [Route("login")]
-        public async Task<IActionResult> Login([FromBody] Login model)
+        public async Task<IActionResult> Login(Login model)
         {
             var user = await _userManager.FindByNameAsync(model.Username);
             if (user != null && await _userManager.CheckPasswordAsync(user, model.Password))
