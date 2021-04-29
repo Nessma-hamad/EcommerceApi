@@ -195,15 +195,14 @@ namespace AngularApi.Migrations
                 name: "Cart",
                 columns: table => new
                 {
-                    UserID = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ID = table.Column<int>(type: "int", nullable: false)
+                    ID = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Cart", x => x.UserID);
+                    table.PrimaryKey("PK_Cart", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Cart_AspNetUsers_UserID",
-                        column: x => x.UserID,
+                        name: "FK_Cart_AspNetUsers_ID",
+                        column: x => x.ID,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -294,7 +293,7 @@ namespace AngularApi.Migrations
                         name: "FK_CartProduct_Cart_CartID",
                         column: x => x.CartID,
                         principalTable: "Cart",
-                        principalColumn: "UserID",
+                        principalColumn: "ID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_CartProduct_Product_ProductID",

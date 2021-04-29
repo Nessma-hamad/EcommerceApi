@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AngularApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210426083941_init")]
+    [Migration("20210429200311_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -59,13 +59,10 @@ namespace AngularApi.Migrations
 
             modelBuilder.Entity("AngularApi.Models.Cart", b =>
                 {
-                    b.Property<string>("UserID")
+                    b.Property<string>("ID")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("ID")
-                        .HasColumnType("int");
-
-                    b.HasKey("UserID");
+                    b.HasKey("ID");
 
                     b.ToTable("Cart");
                 });
@@ -480,7 +477,7 @@ namespace AngularApi.Migrations
                 {
                     b.HasOne("AngularApi.Models.User", "User")
                         .WithOne("Cart")
-                        .HasForeignKey("AngularApi.Models.Cart", "UserID")
+                        .HasForeignKey("AngularApi.Models.Cart", "ID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

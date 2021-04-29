@@ -11,9 +11,12 @@ namespace AngularApi.Models
     [Table("Cart")]
     public class Cart
     {
-        public int ID { get; set; }
+        public Cart()
+        {
+            CartProducts = new List<CartProduct>();
+        }
         [Key, ForeignKey("User")]
-        public string UserID { get; set; }
+        public string ID { get; set; }
 
         public virtual ICollection<CartProduct> CartProducts { get; set; }
         public virtual User User { get; set; }

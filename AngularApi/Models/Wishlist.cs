@@ -9,6 +9,10 @@ namespace AngularApi.Models
 {
     public class Wishlist
     {
+        public Wishlist()
+        {
+            Products = new List<Product>();
+        }
         public int ID { get; set; }
         [Key, ForeignKey("User")]
         public string UserID { get; set; }

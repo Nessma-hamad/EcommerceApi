@@ -66,6 +66,7 @@ D:\To Study\8-Api Core\API Core\AngularApi\AngularApi\bin\Debug\net5.0\Microsoft
 D:\To Study\8-Api Core\API Core\AngularApi\AngularApi\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\appsettings.Development.json
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\appsettings.json
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\AngularApi.StaticWebAssets.xml
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\AngularApi.exe
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\AngularApi.deps.json
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\AngularApi.runtimeconfig.json
@@ -73,12 +74,18 @@ D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\AngularApi.runtimeco
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\AngularApi.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\ref\AngularApi.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\AngularApi.pdb
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\AngularApi.Views.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\AutoMapper.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\BCrypt.Net-Next.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Humanizer.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\System.Net.Http.Formatting.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\System.Web.Http.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.CodeAnalysis.dll
@@ -93,6 +100,7 @@ D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.EntityFram
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.Identity.Client.dll
@@ -102,6 +110,9 @@ D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.IdentityMo
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.Owin.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.Owin.Security.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.Owin.Security.OAuth.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
@@ -112,6 +123,7 @@ D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.VisualStud
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Newtonsoft.Json.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Owin.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -207,15 +219,3 @@ D:\ITI Projects\Angular Project\AngularApi\obj\Debug\net5.0\AngularApi.dll
 D:\ITI Projects\Angular Project\AngularApi\obj\Debug\net5.0\ref\AngularApi.dll
 D:\ITI Projects\Angular Project\AngularApi\obj\Debug\net5.0\AngularApi.pdb
 D:\ITI Projects\Angular Project\AngularApi\obj\Debug\net5.0\AngularApi.genruntimeconfig.cache
-D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\AngularApi.Views.dll
-D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\AutoMapper.dll
-D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\BCrypt.Net-Next.dll
-D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\AngularApi.StaticWebAssets.xml
-D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
-D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
-D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
-D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.Owin.dll
-D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.Owin.Security.dll
-D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Microsoft.Owin.Security.OAuth.dll
-D:\ITI Projects\Angular Project\AngularApi\bin\Debug\net5.0\Owin.dll

@@ -22,6 +22,7 @@ namespace AngularApi.Mapper
                 cfg.CreateMap<Product, ProductDto>().ReverseMap();
                 cfg.CreateMap<Category, CategoryDto>().ReverseMap();
                 cfg.CreateMap<User, UserDto>().ReverseMap();
+                cfg.CreateMap<CartProduct, CartProductDto>().ReverseMap();
 
 
             });

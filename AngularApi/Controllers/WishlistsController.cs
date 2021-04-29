@@ -26,7 +26,15 @@ namespace AngularApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Wishlist>>> GetWishLists()
         {
-            return await _context.WishLists.ToListAsync();
+             var  username = User.Identity.Name;
+            
+            var user = _context.Users.FirstOrDefault(u => u.UserName == username);
+            var userid = user.Id;
+
+            var exitwishlist = _context.WishLists.FirstOrDefault(w => w.UserID == userid);
+
+            var products = exitwishlist.Products.ToList();
+            return Ok(products);
         }
 
         // GET: api/Wishlists/5
@@ -81,6 +89,7 @@ namespace AngularApi.Controllers
         {
             var Product = _context.Products.FirstOrDefault(p=>p.ID==id);
             var  username = User.Identity.Name;
+            
             var user = _context.Users.FirstOrDefault(u => u.UserName == username);
             var userid = user.Id;
 
@@ -88,7 +97,7 @@ namespace AngularApi.Controllers
 
             if(exitwishlist!=null)
             {
-                exitwishlist.Products.Add(Product);
+                exitwishlist.Products.ToList().Add(Product);
 
                 await _context.SaveChangesAsync();
                 return NoContent();
@@ -96,7 +105,8 @@ namespace AngularApi.Controllers
             else
             {
                 Wishlist wishlist = new Wishlist();
-                wishlist.Products.Add(Product);
+                
+                wishlist.Products.ToList().Add(Product);
                 wishlist.UserID = userid;
                 _context.WishLists.Add(wishlist);
                 try
