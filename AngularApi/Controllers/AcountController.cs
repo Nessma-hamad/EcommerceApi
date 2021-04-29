@@ -39,6 +39,7 @@ namespace AngularApi.Controllers
 
         }
         [HttpPost]
+        [Route("register")]
         public async Task<IActionResult> Register( UserDto userdto)
         {
             var user = Mapper.Map<User>(userdto);
