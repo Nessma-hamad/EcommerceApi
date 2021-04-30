@@ -90,12 +90,12 @@ namespace AngularApi.Controllers
             var Product = _context.Products.FirstOrDefault(p => p.ID == id);
             var username = User.Identity.Name;
 
-            var user = _context.Users.FirstOrDefault(u => u.UserName == "q");
+            var user = _context.Users.FirstOrDefault(u => u.UserName == "d");
             var userid = user.Id;
 
-            Wishlist exitwishlist = _context.WishLists.FirstOrDefault(w => w.UserID == "q");
+            Wishlist exitwishlist = _context.WishLists.FirstOrDefault(w => w.UserID == user.Id);
             bool find = false;
-            // bool productAdded = false;
+           
             foreach (var item in exitwishlist.Products)
             {
                 if (item.ID == Product.ID)
@@ -104,40 +104,13 @@ namespace AngularApi.Controllers
             if (!find)
             {
                 exitwishlist.Products.Add(Product);
-
-                //productAdded = true;
+                _context.SaveChanges();                
             }
 
 
-            //if(exitwishlist!=null)
-            //{
-            //    exitwishlist.Products.ToList().Add(Product);
-
-            //    await _context.SaveChangesAsync();
-            //    return NoContent();
-            //}
-            //else
-            //{
-            //    Wishlist wishlist = new Wishlist();
-
-            //    wishlist.Products.ToList().Add(Product);
-            //    wishlist.UserID = userid;
-            //    _context.WishLists.Add(wishlist);
-            //    try
-            //    {
+         
             //        await _context.SaveChangesAsync();
-            //    }
-            //    catch (DbUpdateException)
-            //    {
-            //        if (WishlistExists(wishlist.UserID))
-            //        {
-            //            return Conflict();
-            //        }
-            //        else
-            //        {
-            //            throw;
-            //        }
-            //    }
+ 
 
             return CreatedAtAction("GetWishlist", exitwishlist);
 

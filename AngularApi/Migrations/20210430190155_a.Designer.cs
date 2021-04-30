@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AngularApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210429214540_a")]
+    [Migration("20210430190155_a")]
     partial class a
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -69,13 +69,11 @@ namespace AngularApi.Migrations
 
             modelBuilder.Entity("AngularApi.Models.CartProduct", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
                     b.Property<string>("CartID")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("ID")
+                        .HasColumnType("int");
 
                     b.Property<int>("ProductID")
                         .HasColumnType("int");
@@ -83,9 +81,7 @@ namespace AngularApi.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.HasKey("ID");
-
-                    b.HasIndex("CartID");
+                    b.HasKey("CartID");
 
                     b.HasIndex("ProductID");
 
@@ -488,7 +484,9 @@ namespace AngularApi.Migrations
                 {
                     b.HasOne("AngularApi.Models.Cart", "Cart")
                         .WithMany("CartProducts")
-                        .HasForeignKey("CartID");
+                        .HasForeignKey("CartID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("AngularApi.Models.Product", "Product")
                         .WithMany("CartProducts")

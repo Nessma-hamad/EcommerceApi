@@ -32,8 +32,9 @@ namespace AngularApi.Models
         public virtual DbSet<CartProduct> CartProducts { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            
             base.OnModelCreating(modelBuilder);
+            
         }
         public DbSet<AngularApi.DTO.ProductDto> ProductDto { get; set; }
 

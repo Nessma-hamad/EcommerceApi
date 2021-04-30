@@ -43,34 +43,34 @@ namespace AngularApi.Controllers
 
         // PUT: api/CartProducts/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutCartProduct(int id, CartProduct cartProduct)
-        {
-            if (id != cartProduct.ID)
-            {
-                return BadRequest();
-            }
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutCartProduct(int id, CartProduct cartProduct)
+        //{
+        //    if (id != cartProduct.ID)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            _context.Entry(cartProduct).State = EntityState.Modified;
+        //    _context.Entry(cartProduct).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CartProductExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!CartProductExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
         // POST: api/CartProducts
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
@@ -79,7 +79,7 @@ namespace AngularApi.Controllers
         {
             var username = User.Identity.Name;
 
-            var user = _context.Users.FirstOrDefault(u => u.UserName == "q");
+            var user = _context.Users.FirstOrDefault(u => u.UserName == "d");
             var userid = user.Id;
             CartProduct cartProduct = new CartProduct()
             {
@@ -89,31 +89,41 @@ namespace AngularApi.Controllers
             };
 
             Cart cart = _context.Carts.FirstOrDefault(c=>c.ID==user.Id);
-            bool find = false;
-            bool productAdded = false;
+         var list=   _context.CartProducts.Where(c => c.CartID == cart.ID).ToList();
 
-            foreach (var item in cart.CartProducts)
+
+            if (list.Count == 0)
             {
-                if (item.ProductID == cartProduct.ProductID)
-                {
-                    find = true;
-                    item.Quantity += 1;
-                }
-            }
-            if (!find)
-            {
-                cart.CartProducts.Add(cartProduct);
+                _context.CartProducts.Add(cartProduct);
                 _context.SaveChanges();
-                productAdded = true;
-
             }
-           // return productAdded;
+            else
+            {
+                foreach (var item in list)
+                {
+                    if (item.ProductID == id)
+                    {
+                        var p = _context.CartProducts.Where(c => c.CartID == cart.ID)
+                            .FirstOrDefault(c => c.ProductID == id);
+                        p.Quantity += 1;
+                       // _context.SaveChanges();
+                    }
+                    else
+                    {
+                        _context.CartProducts.Add(cartProduct);
+                        // _context.SaveChanges();
+                    }
 
-            //    _context.CartProducts.Add(cartProduct);
-            //    await _context.SaveChangesAsync();
-
-               return CreatedAtAction("GetCartProduct", cartProduct);
+                }
+                _context.SaveChanges();
+            }
+            return CreatedAtAction("GetCartProduct", cartProduct);
         }
+         
+           
+
+            
+   
 
         // DELETE: api/CartProducts/5
         [HttpDelete("{id}")]
@@ -131,9 +141,9 @@ namespace AngularApi.Controllers
             return NoContent();
         }
 
-        private bool CartProductExists(int id)
-        {
-            return _context.CartProducts.Any(e => e.ID == id);
-        }
+        //private bool CartProductExists(int id)
+        //{
+        //    return _context.CartProducts.Any(e => e.ID == id);
+        //}
     }
 }

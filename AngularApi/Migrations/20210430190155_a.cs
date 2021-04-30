@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AngularApi.Migrations
 {
-    public partial class init : Migration
+    public partial class a : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -280,21 +280,20 @@ namespace AngularApi.Migrations
                 name: "CartProduct",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CartID = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ID = table.Column<int>(type: "int", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
-                    CartID = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     ProductID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CartProduct", x => x.ID);
+                    table.PrimaryKey("PK_CartProduct", x => x.CartID);
                     table.ForeignKey(
                         name: "FK_CartProduct_Cart_CartID",
                         column: x => x.CartID,
                         principalTable: "Cart",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_CartProduct_Product_ProductID",
                         column: x => x.ProductID,
@@ -396,11 +395,6 @@ namespace AngularApi.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_CartProduct_CartID",
-                table: "CartProduct",
-                column: "CartID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_CartProduct_ProductID",

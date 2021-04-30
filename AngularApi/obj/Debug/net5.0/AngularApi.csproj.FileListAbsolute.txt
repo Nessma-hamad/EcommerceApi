@@ -219,6 +219,12 @@ D:\ITI Projects\Angular Project\AngularApi\obj\Debug\net5.0\AngularApi.dll
 D:\ITI Projects\Angular Project\AngularApi\obj\Debug\net5.0\ref\AngularApi.dll
 D:\ITI Projects\Angular Project\AngularApi\obj\Debug\net5.0\AngularApi.pdb
 D:\ITI Projects\Angular Project\AngularApi\obj\Debug\net5.0\AngularApi.genruntimeconfig.cache
+E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\AngularApi.GeneratedMSBuildEditorConfig.editorconfig
+E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\AngularApi.AssemblyInfoInputs.cache
+E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\AngularApi.AssemblyInfo.cs
+E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\AngularApi.csproj.CoreCompileInputs.cache
+E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\AngularApi.MvcApplicationPartsAssemblyInfo.cs
+E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\AngularApi.MvcApplicationPartsAssemblyInfo.cache
 E:\p\api\EcommerceApi\AngularApi\bin\Debug\net5.0\appsettings.Development.json
 E:\p\api\EcommerceApi\AngularApi\bin\Debug\net5.0\appsettings.json
 E:\p\api\EcommerceApi\AngularApi\bin\Debug\net5.0\AngularApi.StaticWebAssets.xml
@@ -358,13 +364,6 @@ E:\p\api\EcommerceApi\AngularApi\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\do
 E:\p\api\EcommerceApi\AngularApi\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 E:\p\api\EcommerceApi\AngularApi\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 E:\p\api\EcommerceApi\AngularApi\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\AngularApi.csprojAssemblyReference.cache
-E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\AngularApi.GeneratedMSBuildEditorConfig.editorconfig
-E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\AngularApi.AssemblyInfoInputs.cache
-E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\AngularApi.AssemblyInfo.cs
-E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\AngularApi.csproj.CoreCompileInputs.cache
-E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\AngularApi.MvcApplicationPartsAssemblyInfo.cs
-E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\AngularApi.MvcApplicationPartsAssemblyInfo.cache
 E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\staticwebassets\AngularApi.StaticWebAssets.Manifest.cache
 E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\staticwebassets\AngularApi.StaticWebAssets.xml
 E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\scopedcss\bundle\AngularApi.styles.css
@@ -374,3 +373,4 @@ E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\AngularApi.dll
 E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\ref\AngularApi.dll
 E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\AngularApi.pdb
 E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\AngularApi.genruntimeconfig.cache
+E:\p\api\EcommerceApi\AngularApi\obj\Debug\net5.0\AngularApi.csprojAssemblyReference.cache
