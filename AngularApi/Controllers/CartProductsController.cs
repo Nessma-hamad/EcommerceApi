@@ -79,7 +79,7 @@ namespace AngularApi.Controllers
         {
             var username = User.Identity.Name;
 
-            var user = _context.Users.FirstOrDefault(u => u.UserName == username);
+            var user = _context.Users.FirstOrDefault(u => u.UserName == "q");
             var userid = user.Id;
             CartProduct cartProduct = new CartProduct()
             {
@@ -91,10 +91,14 @@ namespace AngularApi.Controllers
             Cart cart = _context.Carts.FirstOrDefault(c=>c.ID==user.Id);
             bool find = false;
             bool productAdded = false;
+
             foreach (var item in cart.CartProducts)
             {
                 if (item.ProductID == cartProduct.ProductID)
-                { find = true; }
+                {
+                    find = true;
+                    item.Quantity += 1;
+                }
             }
             if (!find)
             {
@@ -108,7 +112,7 @@ namespace AngularApi.Controllers
             //    _context.CartProducts.Add(cartProduct);
             //    await _context.SaveChangesAsync();
 
-               return CreatedAtAction("GetCartProduct", new { id = cartProduct.ID }, cartProduct);
+               return CreatedAtAction("GetCartProduct", cartProduct);
         }
 
         // DELETE: api/CartProducts/5

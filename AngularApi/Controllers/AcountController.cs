@@ -30,19 +30,20 @@ namespace AngularApi.Controllers
         protected readonly IMapper Mapper = Mapperconfig.mapp;
         protected readonly UserManager<IdentityUser> _userManager;
         private readonly IConfiguration _configuration;
+        private readonly DataContext _context;
 
-
-        public AcountController(UserManager<IdentityUser> userManager, IConfiguration configuration)
+        public AcountController(UserManager<IdentityUser> userManager, IConfiguration configuration, DataContext context)
         {
             _userManager = userManager;
             _configuration = configuration;
-
+            _context = context;
         }
         [HttpPost]
         [Route("register")]
         public async Task<IActionResult> Register( UserDto userdto)
         {
             var user = Mapper.Map<User>(userdto);
+
             if (!ModelState.IsValid)
             {
                 return BadRequest("Data Not Valid");
@@ -61,6 +62,10 @@ namespace AngularApi.Controllers
 
                 if (result.Succeeded)
                 {
+                    _context.Carts.Add(new Cart() { ID = identity.Id });
+                    //_context.SaveChanges();
+                    _context.WishLists.Add(new Wishlist() { UserID = identity.Id });
+                    _context.SaveChanges();
                     //  return Redirect("http://localhost:49682/Student_Index.html");
                     return Ok();
                 }

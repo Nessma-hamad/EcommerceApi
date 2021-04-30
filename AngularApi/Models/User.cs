@@ -10,6 +10,10 @@ namespace AngularApi.Models
 {
     public class User : IdentityUser
     {
+        //public User()
+        //{
+        //    Cart = new Cart();
+        //}
         [Required]
         public string UserName { get; set; }
         

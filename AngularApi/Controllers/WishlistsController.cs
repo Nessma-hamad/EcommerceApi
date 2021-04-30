@@ -26,9 +26,9 @@ namespace AngularApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Wishlist>>> GetWishLists()
         {
-             var  username = User.Identity.Name;
-            
-            var user = _context.Users.FirstOrDefault(u => u.UserName == username);
+            var username = User.Identity.Name;
+
+            var user = _context.Users.FirstOrDefault(u => u.UserName =="q" /*username*/);
             var userid = user.Id;
 
             var exitwishlist = _context.WishLists.FirstOrDefault(w => w.UserID == userid);
@@ -87,49 +87,63 @@ namespace AngularApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Wishlist>> PostWishlist(int id)
         {
-            var Product = _context.Products.FirstOrDefault(p=>p.ID==id);
-            var  username = User.Identity.Name;
-            
-            var user = _context.Users.FirstOrDefault(u => u.UserName == username);
+            var Product = _context.Products.FirstOrDefault(p => p.ID == id);
+            var username = User.Identity.Name;
+
+            var user = _context.Users.FirstOrDefault(u => u.UserName == "q");
             var userid = user.Id;
 
-            var exitwishlist = _context.WishLists.FirstOrDefault(w => w.UserID == userid);
-
-            if(exitwishlist!=null)
+            Wishlist exitwishlist = _context.WishLists.FirstOrDefault(w => w.UserID == "q");
+            bool find = false;
+            // bool productAdded = false;
+            foreach (var item in exitwishlist.Products)
             {
-                exitwishlist.Products.ToList().Add(Product);
-
-                await _context.SaveChangesAsync();
-                return NoContent();
+                if (item.ID == Product.ID)
+                { find = true; }
             }
-            else
+            if (!find)
             {
-                Wishlist wishlist = new Wishlist();
-                
-                wishlist.Products.ToList().Add(Product);
-                wishlist.UserID = userid;
-                _context.WishLists.Add(wishlist);
-                try
-                {
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateException)
-                {
-                    if (WishlistExists(wishlist.UserID))
-                    {
-                        return Conflict();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                exitwishlist.Products.Add(Product);
 
-                return CreatedAtAction("GetWishlist", new { id = wishlist.UserID }, wishlist);
-
+                //productAdded = true;
             }
-            
+
+
+            //if(exitwishlist!=null)
+            //{
+            //    exitwishlist.Products.ToList().Add(Product);
+
+            //    await _context.SaveChangesAsync();
+            //    return NoContent();
+            //}
+            //else
+            //{
+            //    Wishlist wishlist = new Wishlist();
+
+            //    wishlist.Products.ToList().Add(Product);
+            //    wishlist.UserID = userid;
+            //    _context.WishLists.Add(wishlist);
+            //    try
+            //    {
+            //        await _context.SaveChangesAsync();
+            //    }
+            //    catch (DbUpdateException)
+            //    {
+            //        if (WishlistExists(wishlist.UserID))
+            //        {
+            //            return Conflict();
+            //        }
+            //        else
+            //        {
+            //            throw;
+            //        }
+            //    }
+
+            return CreatedAtAction("GetWishlist", exitwishlist);
+
         }
+
+
 
         // DELETE: api/Wishlists/5
         [HttpDelete("{id}")]
@@ -142,7 +156,7 @@ namespace AngularApi.Controllers
 
             var exitwishlist = _context.WishLists.FirstOrDefault(w => w.UserID == userid);
 
-            if(Product==null)
+            if (Product == null)
             {
                 return NotFound();
             }

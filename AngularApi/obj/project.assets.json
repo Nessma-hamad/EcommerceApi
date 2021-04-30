@@ -9504,25 +9504,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\emabd\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Microsoft\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\ITI_Courses\\Angular\\project\\Api\\EcommerceApi\\AngularApi\\AngularApi.csproj",
+      "projectUniqueName": "E:\\p\\api\\EcommerceApi\\AngularApi\\AngularApi.csproj",
       "projectName": "AngularApi",
-      "projectPath": "F:\\ITI_Courses\\Angular\\project\\Api\\EcommerceApi\\AngularApi\\AngularApi.csproj",
-      "packagesPath": "C:\\Users\\emabd\\.nuget\\packages\\",
-      "outputPath": "F:\\ITI_Courses\\Angular\\project\\Api\\EcommerceApi\\AngularApi\\obj\\",
+      "projectPath": "E:\\p\\api\\EcommerceApi\\AngularApi\\AngularApi.csproj",
+      "packagesPath": "C:\\Users\\Microsoft\\.nuget\\packages\\",
+      "outputPath": "E:\\p\\api\\EcommerceApi\\AngularApi\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\emabd\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Microsoft\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -9620,7 +9615,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   },
